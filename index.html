@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DÉLICE — Styling Atelier, Couture & Ready-to-Wear</title>
+  <meta name="description" content="In the heart of Lévis, Délice Atelier blends sartorial boldness, warmth, and hospitality in a vibrant, welcoming atmosphere. Discover our collections, daily rituals, and private styling suites.">
+  
+  <!-- Google Fonts: Syne (Funky & Classy), Italiana (Editorial Serif), Plus Jakarta Sans (Readable Non-Jarring Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- TOP DAILY TICKER -->
+  <aside class="ticker-bar" aria-label="Daily announcements and specials">
+    <div class="ticker-track">
+      <div class="ticker-item">
+        <span class="ticker-badge">Happy Hour</span>
+        <span>Styling & Drinks — Daily from 2 PM to 6 PM</span>
+      </div>
+      <span class="ticker-sep">✦</span>
+      <div class="ticker-item">
+        <span class="ticker-badge">Lunch Specials</span>
+        <span>30-Min Express Look — Daily from 11 AM to 3 PM</span>
+      </div>
+      <span class="ticker-sep">✦</span>
+      <div class="ticker-item">
+        <span class="ticker-badge">Vintage Tuesday</span>
+        <span>Curated Archival Pieces — Tuesdays from 11 AM to 10 PM</span>
+      </div>
+      <span class="ticker-sep">✦</span>
+      <div class="ticker-item">
+        <span class="ticker-badge">Wednesdélice</span>
+        <span>20% off styling delivery & at-home concierge</span>
+      </div>
+      <span class="ticker-sep">✦</span>
+      <div class="ticker-item">
+        <span class="ticker-badge">Silhouette Lab</span>
+        <span>Unlimited fittings & adjustments — Wednesdays 4 PM to 10 PM</span>
+      </div>
+      <span class="ticker-sep">✦</span>
+      <div class="ticker-item">
+        <span class="ticker-badge">Wine & Suites</span>
+        <span>Private styling salons at 1/2 price — Thursdays from 11 AM</span>
+      </div>
+      <!-- Continuous loop duplicate -->
+      <span class="ticker-sep">✦</span>
+      <div class="ticker-item">
+        <span class="ticker-badge">Happy Hour</span>
+        <span>Styling & Drinks — Daily from 2 PM to 6 PM</span>
+      </div>
+      <span class="ticker-sep">✦</span>
+      <div class="ticker-item">
+        <span class="ticker-badge">Lunch Specials</span>
+        <span>30-Min Express Look — Daily from 11 AM to 3 PM</span>
+      </div>
+      <span class="ticker-sep">✦</span>
+      <div class="ticker-item">
+        <span class="ticker-badge">Vintage Tuesday</span>
+        <span>Curated Archival Pieces — Tuesdays from 11 AM to 10 PM</span>
+      </div>
+      <span class="ticker-sep">✦</span>
+      <div class="ticker-item">
+        <span class="ticker-badge">Wednesdélice</span>
+        <span>20% off styling delivery & at-home concierge</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- NAVIGATION BAR -->
+  <header class="navbar-wrapper">
+    <nav class="navbar" id="main-nav">
+      <div class="brand-container">
+        <a href="#hero" class="brand-logo">
+          DÉLICE<span class="brand-dot">•</span>
+        </a>
+        <span class="brand-tagline" data-i18n="nav.tagline">Styling & Atelier 1970</span>
+      </div>
+
+      <ul class="nav-links" id="nav-menu">
+        <li class="nav-item"><a href="#collections" data-i18n="nav.collections">The Collections</a></li>
+        <li class="nav-item"><a href="#rituals" data-i18n="nav.rituals">Daily Pleasures</a></li>
+        <li class="nav-item"><a href="#suites" data-i18n="nav.suites">Private Suites</a></li>
+        <li class="nav-item"><a href="#careers" data-i18n="nav.careers">Careers</a></li>
+        <li class="nav-item"><a href="#visit" data-i18n="nav.visit">The Atelier</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Interactive Style Finder Quiz Trigger -->
+        <button class="btn-funky" id="open-quiz-btn" title="Discover your ideal silhouette">
+          <span data-i18n="btn.quiz">✦ Style Diagnostic</span>
+        </button>
+
+        <!-- Ambient Lounge Sound Synthesizer -->
+        <button class="sound-toggle-btn" id="sound-toggle" title="Atelier ambient sound" aria-label="Ambient sound">
+          <div class="sound-wave" id="sound-bars">
+            <span></span><span></span><span></span>
+          </div>
+          <span id="sound-label">Lounge</span>
+        </button>
+
+        <!-- Language Switcher (EN Active by Default) -->
+        <div class="lang-switch">
+          <button class="lang-btn active" data-lang="en" id="lang-en">EN</button>
+          <button class="lang-btn" data-lang="fr" id="lang-fr">FR</button>
+        </div>
+
+        <!-- Primary Booking Action -->
+        <button class="btn-primary" id="open-booking-btn">
+          <span data-i18n="btn.book">Book Appointment</span>
+        </button>
+
+        <!-- Mobile hamburger -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Navigation Menu">
+          ☰
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <main>
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-eyebrow-wrapper">
+            <span class="badge-mild" data-i18n="hero.badge">Couture & Styling since 1970</span>
+            <span class="badge-tag">Lévis &bull; Québec</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span data-i18n="hero.title_part1">The art of wardrobe,</span><br>
+            <span class="title-italic" data-i18n="hero.title_part2">the daring of style.</span>
+          </h1>
+
+          <p class="hero-subtitle" data-i18n="hero.desc">
+            In the heart of Lévis, blending warmth, grandeur, and welcoming vibes in a vibrant atmosphere. Discover our bespoke silhouettes, mild organic fabrics, and personalized styling guidance.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#collections" class="btn-primary" data-i18n="hero.btn_collections">Explore Collections</a>
+            <button class="btn-secondary" id="hero-quiz-cta" data-i18n="hero.btn_quiz">Take Silhouette Quiz</button>
+          </div>
+
+          <!-- Quick Daily Rituals Pills Strip -->
+          <div class="hero-rituals-strip">
+            <div class="strip-label">
+              <span class="pill-dot"></span>
+              <span data-i18n="hero.strip_label">Weekly Specials & Daily Rituals</span>
+            </div>
+            <div class="strip-pills">
+              <div class="strip-pill">
+                <span class="pill-dot"></span>
+                <span>Happy Hour 2 PM–6 PM</span>
+              </div>
+              <div class="strip-pill">
+                <span class="pill-dot"></span>
+                <span>Lunch Specials 11 AM–3 PM</span>
+              </div>
+              <div class="strip-pill">
+                <span class="pill-dot"></span>
+                <span>Vintage Tuesday 11 AM–10 PM</span>
+              </div>
+              <div class="strip-pill">
+                <span class="pill-dot"></span>
+                <span>Wednesdélice -20%</span>
+              </div>
+              <div class="strip-pill">
+                <span class="pill-dot"></span>
+                <span>Unlimited Alterations 4 PM–10 PM</span>
+              </div>
+              <div class="strip-pill">
+                <span class="pill-dot"></span>
+                <span>Thursday Suites 1/2 Price</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Showcase -->
+        <div class="hero-visual-card">
+          <div class="floating-badge badge-top">
+            <div class="badge-icon-box sage">✂️</div>
+            <div>
+              <div class="badge-text-title" data-i18n="hero.badge_top_title">Bespoke Styling</div>
+              <div class="badge-text-desc" data-i18n="hero.badge_top_sub">Pure fibers & architectural tailoring</div>
+            </div>
+          </div>
+
+          <div class="visual-frame">
+            <img src="assets/images/hero.jpg" alt="Délice Atelier - Models and stylists in soft, tailored pastel attire" width="900" height="1080" loading="eager">
+          </div>
+
+          <div class="floating-badge badge-bottom">
+            <div class="badge-icon-box blush">✦</div>
+            <div>
+              <div class="badge-text-title" data-i18n="hero.badge_bot_title">VIP Suite Open</div>
+              <div class="badge-text-desc" data-i18n="hero.badge_bot_sub">Welcome bubbles & concierge service</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: THE WARDROBE PHILOSOPHY (Mild Color Trio Cards) -->
+    <section class="philosophy-section" id="philosophy">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-eyebrow" data-i18n="philo.eyebrow">The Wardrobe Philosophy</span>
+          <h2 class="section-title" data-i18n="philo.title">A Choice for Every Silhouette</h2>
+          <p class="section-desc" data-i18n="philo.desc">
+            World textures, pure textiles, and garments designed to elevate your everyday glow. For early birds, our Breakfast Capsule consultations await fresh, diverse, and colorful.
+          </p>
+        </header>
+
+        <div class="philosophy-grid">
+          <!-- Card 1: Mild Sage -->
+          <article class="philosophy-card card-sage">
+            <span class="philosophy-icon">🌿</span>
+            <h3 class="philosophy-title" data-i18n="philo.card1_title">Mild & Responsible Fabrics</h3>
+            <p class="philosophy-text" data-i18n="philo.card1_desc">
+              Organic washed linen, delicate combed wool, and textured silks in soothing pastel and earth tones that respect your skin and freedom of movement.
+            </p>
+            <a href="#collections" class="philosophy-link">
+              <span data-i18n="philo.card1_link">Explore Fabrics</span> <span>&rarr;</span>
+            </a>
+          </article>
+
+          <!-- Card 2: Mild Linen -->
+          <article class="philosophy-card card-linen">
+            <span class="philosophy-icon">🧥</span>
+            <h3 class="philosophy-title" data-i18n="philo.card2_title">Architectural Cuts & Ease</h3>
+            <p class="philosophy-text" data-i18n="philo.card2_desc">
+              A subtle balance of relaxed modernity and tailored precision. Our structured jackets and fluid trousers effortlessly flatter every silhouette.
+            </p>
+            <a href="#collections" class="philosophy-link">
+              <span data-i18n="philo.card2_link">View Silhouettes</span> <span>&rarr;</span>
+            </a>
+          </article>
+
+          <!-- Card 3: Mild Blush -->
+          <article class="philosophy-card card-blush">
+            <span class="philosophy-icon">✨</span>
+            <h3 class="philosophy-title" data-i18n="philo.card3_title">Private Styling Sessions</h3>
+            <p class="philosophy-text" data-i18n="philo.card3_desc">
+              Our stylists guide you without pressure to build your seasonal capsule or prepare for an event in the plush intimacy of our private suites.
+            </p>
+            <a href="#suites" class="philosophy-link">
+              <span data-i18n="philo.card3_link">Discover Suites</span> <span>&rarr;</span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: DAILY STYLE RITUALS (Plaisirs du jour) -->
+    <!-- Direct translation of the user's specials table -->
+    <section class="rituals-section" id="rituals">
+      <div class="container">
+        <div class="rituals-container-card">
+          <header class="section-header">
+            <span class="section-eyebrow" data-i18n="rituals.eyebrow">Daily Pleasures</span>
+            <h2 class="section-title dark" data-i18n="rituals.title">Your Weekly Styling Rituals</h2>
+            <p class="section-desc dark" data-i18n="rituals.desc">
+              Every day has its signature charm. From Happy Hour styling to wine & fitting nights, enjoy the Délice experience with our daily perks.
+            </p>
+          </header>
+
+          <div class="rituals-grid">
+            <!-- 1. Happy Hour -->
+            <article class="ritual-item-card">
+              <div class="ritual-top">
+                <span class="ritual-tag tag-orange">Every Day</span>
+                <span class="ritual-time">2 PM – 6 PM</span>
+              </div>
+              <h3 class="ritual-name" data-i18n="rituals.item1_title">Happy Hour Styling</h3>
+              <div class="ritual-punchline" data-i18n="rituals.item1_punchline">Your late afternoons, elevated.</div>
+              <p class="ritual-desc" data-i18n="rituals.item1_desc">
+                Express silhouette consultation and personalized accessorizing with a signature complimentary drink in our lounge.
+              </p>
+              <div class="ritual-action">
+                <span class="ritual-price">Included in Lounge</span>
+                <button class="ritual-btn book-special-btn" data-special="Happy Hour">Reserve</button>
+              </div>
+            </article>
+
+            <!-- 2. Lunch Specials -->
+            <article class="ritual-item-card">
+              <div class="ritual-top">
+                <span class="ritual-tag tag-amber">Every Day</span>
+                <span class="ritual-time">11 AM – 3 PM</span>
+              </div>
+              <h3 class="ritual-name" data-i18n="rituals.item2_title">Lunch Specials</h3>
+              <div class="ritual-punchline" data-i18n="rituals.item2_punchline">Lunch break, at friendly prices.</div>
+              <p class="ritual-desc" data-i18n="rituals.item2_desc">
+                Our "30-Minute Express Look": 3 coordinated outfits ready to try on upon your arrival with zero waiting.
+              </p>
+              <div class="ritual-action">
+                <span class="ritual-price">Express Formula</span>
+                <button class="ritual-btn book-special-btn" data-special="Lunch Specials">Reserve</button>
+              </div>
+            </article>
+
+            <!-- 3. Vintage Tuesday -->
+            <article class="ritual-item-card">
+              <div class="ritual-top">
+                <span class="ritual-tag tag-green">Every Tuesday</span>
+                <span class="ritual-time">11 AM – 10 PM</span>
+              </div>
+              <h3 class="ritual-name" data-i18n="rituals.item3_title">Archival Vintage Tuesdays</h3>
+              <div class="ritual-punchline" data-i18n="rituals.item3_punchline">Crisp, golden, irresistible.</div>
+              <p class="ritual-desc" data-i18n="rituals.item3_desc">
+                Exclusive drop of our restored 70s and 80s vintage finds, oversized blazers, and timeless trench coats at gentle prices.
+              </p>
+              <div class="ritual-action">
+                <span class="ritual-price">Limited Edition</span>
+                <button class="ritual-btn book-special-btn" data-special="Vintage Tuesday">Explore</button>
+              </div>
+            </article>
+
+            <!-- 4. Wednesdélice -->
+            <article class="ritual-item-card">
+              <div class="ritual-top">
+                <span class="ritual-tag tag-orange">Every Wednesday</span>
+                <span class="ritual-time">All Day</span>
+              </div>
+              <h3 class="ritual-name" data-i18n="rituals.item4_title">Wednesdélice Concierge</h3>
+              <div class="ritual-punchline" data-i18n="rituals.item4_punchline">On Wednesdays, we think style.</div>
+              <p class="ritual-desc" data-i18n="rituals.item4_desc">
+                20% off styled home delivery and private courier try-ons to bring home your favorite looks.
+              </p>
+              <div class="ritual-action">
+                <span class="ritual-price">-20% Delivery</span>
+                <button class="ritual-btn book-special-btn" data-special="Wednesdélice">Order</button>
+              </div>
+            </article>
+
+            <!-- 5. Alterations & Unlimited Fitting -->
+            <article class="ritual-item-card">
+              <div class="ritual-top">
+                <span class="ritual-tag tag-blue">Every Wednesday</span>
+                <span class="ritual-time">4 PM – 10 PM</span>
+              </div>
+              <h3 class="ritual-name" data-i18n="rituals.item5_title">Adjustments & Unlimited Fitting</h3>
+              <div class="ritual-punchline" data-i18n="rituals.item5_punchline">A classic with no limits.</div>
+              <p class="ritual-desc" data-i18n="rituals.item5_desc">
+                Our master tailors provide complimentary hem adjustments, shaping, and sleeve alterations on all pieces from our collection.
+              </p>
+              <div class="ritual-action">
+                <span class="ritual-price">Open Atelier</span>
+                <button class="ritual-btn book-special-btn" data-special="Alterations Lab">Enjoy</button>
+              </div>
+            </article>
+
+            <!-- 6. Wine & VIP Suites at 1/2 Price -->
+            <article class="ritual-item-card">
+              <div class="ritual-top">
+                <span class="ritual-tag tag-amber">Every Thursday</span>
+                <span class="ritual-time">From 11 AM</span>
+              </div>
+              <h3 class="ritual-name" data-i18n="rituals.item6_title">Wine Tasting & VIP Suites</h3>
+              <div class="ritual-punchline" data-i18n="rituals.item6_punchline">All our private suites, at half price.</div>
+              <p class="ritual-desc" data-i18n="rituals.item6_desc">
+                Half-price private styling suite rentals paired with curated wine tastings for an unforgettable evening with friends.
+              </p>
+              <div class="ritual-action">
+                <span class="ritual-price">-50% Suites</span>
+                <button class="ritual-btn book-special-btn" data-special="Thursday Half Price">Reserve</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: KEY HERITAGE STATS -->
+    <!-- Matches 160, 1970, 700, 300 from reference -->
+    <section class="stats-section" id="stats">
+      <div class="container">
+        <div class="stats-card-wrapper">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-number" data-target="160">160</div>
+              <div class="stat-title" data-i18n="stats.stat1_title">Passionate Artisans</div>
+              <div class="stat-sub" data-i18n="stats.stat1_sub">Stylists, patternmakers & consultants</div>
+            </div>
+
+            <div class="stat-item">
+              <div class="stat-number" data-target="1970">1970</div>
+              <div class="stat-title" data-i18n="stats.stat2_title">Founding Year</div>
+              <div class="stat-sub" data-i18n="stats.stat2_sub">Over 50 years of sartorial heritage</div>
+            </div>
+
+            <div class="stat-item">
+              <div class="stat-number" data-target="700">700</div>
+              <div class="stat-title" data-i18n="stats.stat3_title">Wardrobes Curated</div>
+              <div class="stat-sub" data-i18n="stats.stat3_sub">Bespoke capsules each fashion season</div>
+            </div>
+
+            <div class="stat-item">
+              <div class="stat-number" data-target="300">300</div>
+              <div class="stat-title" data-i18n="stats.stat4_title">Partner Designers</div>
+              <div class="stat-sub" data-i18n="stats.stat4_sub">Ethical textiles sourced worldwide</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: INTERACTIVE LOOKBOOK & CAPSULE -->
+    <section class="lookbook-section" id="collections">
+      <div class="container">
+        <div class="lookbook-wrapper">
+          <header class="section-header">
+            <span class="section-eyebrow" data-i18n="lookbook.eyebrow">The Lookbook</span>
+            <h2 class="section-title dark" data-i18n="lookbook.title">Current Collections</h2>
+            <p class="section-desc dark" data-i18n="lookbook.desc">
+              Gentle hues, relaxed cuts, and contemporary touches tailored to be mixed and matched effortlessly.
+            </p>
+          </header>
+
+          <div class="lookbook-filter-bar">
+            <button class="filter-btn active" data-filter="all">All Looks</button>
+            <button class="filter-btn" data-filter="tailoring">Tailoring & Blazers</button>
+            <button class="filter-btn" data-filter="capsule">Casual Capsule</button>
+            <button class="filter-btn" data-filter="evening">Evening & Cocktail</button>
+          </div>
+
+          <div class="lookbook-grid" id="lookbook-items">
+            <!-- Item 1: Featuring lavender.jpg -->
+            <article class="lookbook-card" data-category="tailoring capsule">
+              <div class="lookbook-img-box">
+                <span class="lookbook-tag-floating">Lavender Pink Signature</span>
+                <img src="assets/images/lavender.jpg" alt="Tailored lavender pink double-breasted suit and trousers" loading="lazy">
+              </div>
+              <div class="lookbook-body">
+                <h3 class="lookbook-title">Lavender Orchid Tailored Suit</h3>
+                <div class="lookbook-material">Pure silk wool, double-breasted cut & fluid pressed trousers</div>
+                <div class="lookbook-palette">
+                  <span class="color-dot" style="background: #d8b4e2" title="Powder Lavender"></span>
+                  <span class="color-dot" style="background: #f09ac2" title="Blossom Rose"></span>
+                  <span class="color-dot" style="background: #faf5f8" title="Lilac Marshmallow"></span>
+                </div>
+                <div class="lookbook-footer">
+                  <span class="lookbook-price">$440</span>
+                  <button class="btn-primary lookbook-try-btn" data-look="Lavender Orchid Tailored Suit">Try in Salon</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Item 2: Featuring capsule.jpg -->
+            <article class="lookbook-card" data-category="capsule tailoring">
+              <div class="lookbook-img-box">
+                <span class="lookbook-tag-floating">Mild Pastel Capsule</span>
+                <img src="assets/images/capsule.jpg" alt="Cream blazer ensemble with dusty rose vest and sage trousers" loading="lazy">
+              </div>
+              <div class="lookbook-body">
+                <h3 class="lookbook-title">Lévis Flânerie Set</h3>
+                <div class="lookbook-material">Combed virgin wool, dusty rose cotton vest & sage trousers</div>
+                <div class="lookbook-palette">
+                  <span class="color-dot" style="background: #ece3d4" title="Cream Sand"></span>
+                  <span class="color-dot" style="background: #e2a89f" title="Dusty Rose"></span>
+                  <span class="color-dot" style="background: #90a498" title="Sage Green"></span>
+                </div>
+                <div class="lookbook-footer">
+                  <span class="lookbook-price">$340</span>
+                  <button class="btn-primary lookbook-try-btn" data-look="Lévis Flânerie Set">Try in Salon</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Item 2: Featuring hero.jpg detail -->
+            <article class="lookbook-card" data-category="tailoring evening">
+              <div class="lookbook-img-box">
+                <span class="lookbook-tag-floating">Atelier Couture</span>
+                <img src="assets/images/hero.jpg" alt="Off-white suit with architectural sleeves and draped lilac gown" loading="lazy">
+              </div>
+              <div class="lookbook-body">
+                <h3 class="lookbook-title">Nuance Cream Suit</h3>
+                <div class="lookbook-material">Satin cold wool & architectural puff sleeve cut</div>
+                <div class="lookbook-palette">
+                  <span class="color-dot" style="background: #faf7f2" title="Off-White"></span>
+                  <span class="color-dot" style="background: #d8cde6" title="Soft Lilac"></span>
+                  <span class="color-dot" style="background: #c3d9cf" title="Powder Mint"></span>
+                </div>
+                <div class="lookbook-footer">
+                  <span class="lookbook-price">$485</span>
+                  <button class="btn-primary lookbook-try-btn" data-look="Nuance Cream Suit">Try in Salon</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Item 3: Featuring lounge.jpg -->
+            <article class="lookbook-card" data-category="evening">
+              <div class="lookbook-img-box">
+                <span class="lookbook-tag-floating">VIP Lounge Exclusive</span>
+                <img src="assets/images/lounge.jpg" alt="Ecru tuxedo suit in a sumptuous private fitting suite" loading="lazy">
+              </div>
+              <div class="lookbook-body">
+                <h3 class="lookbook-title">Ecru Feminine Tuxedo</h3>
+                <div class="lookbook-material">Heavy silk crepe, champagne satin lining</div>
+                <div class="lookbook-palette">
+                  <span class="color-dot" style="background: #fffdfa" title="Royal Ecru"></span>
+                  <span class="color-dot" style="background: #e5a93b" title="Brass Accents"></span>
+                  <span class="color-dot" style="background: #f7ebe8" title="Powder Pink"></span>
+                </div>
+                <div class="lookbook-footer">
+                  <span class="lookbook-price">$560</span>
+                  <button class="btn-primary lookbook-try-btn" data-look="Ecru Feminine Tuxedo">Try in Salon</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: VIP SUITES & PRIVATE SALONS -->
+    <section class="suites-section" id="suites">
+      <div class="container suites-grid">
+        <div class="suites-visual">
+          <img src="assets/images/lounge.jpg" alt="Délice private styling salon with velvet sofas and golden arched mirrors" loading="lazy">
+        </div>
+
+        <div class="suites-card">
+          <span class="section-eyebrow" data-i18n="suites.eyebrow">Exclusive Experience</span>
+          <h2 class="section-title dark" data-i18n="suites.title">Private Suites & VIP Fitting</h2>
+          <p class="section-desc dark" data-i18n="suites.desc">
+            Experience an intimate wardrobe transformation. Our private rooms welcome personal fittings, event preparations, or group styling sessions in a serene atmosphere.
+          </p>
+
+          <ul class="suites-features">
+            <li>
+              <span class="icon">✓</span>
+              <span>Dedicated personal stylist throughout your session</span>
+            </li>
+            <li>
+              <span class="icon">✓</span>
+              <span>Complimentary bubbles, fine teas, and gourmet treats</span>
+            </li>
+            <li>
+              <span class="icon">✓</span>
+              <span>3D tri-fold mirrors with adjustable day/evening lighting</span>
+            </li>
+            <li>
+              <span class="icon">✓</span>
+              <span>On-site instant tailoring and adjustment service</span>
+            </li>
+          </ul>
+
+          <button class="btn-primary" id="open-suite-modal-btn" data-i18n="suites.btn">
+            Reserve a Private Suite
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: CAREERS / OPEN POSITIONS -->
+    <!-- Directly reproducing every field and position from user's reference -->
+    <section class="careers-section" id="careers">
+      <div class="container">
+        <div class="careers-card">
+          <div class="careers-header">
+            <span class="section-eyebrow" data-i18n="careers.eyebrow">Open Positions</span>
+            <h2 class="section-title dark" data-i18n="careers.title">We Are Hiring — Délice Atelier</h2>
+            <p class="section-desc dark" data-i18n="careers.desc">
+              Join an inspired team of over 160 fashion professionals, tailors, and hosts in downtown Lévis.
+            </p>
+          </div>
+
+          <form class="careers-form" id="careers-application-form">
+            <!-- Contact info block -->
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="first-name">First Name *</label>
+                <input type="text" id="first-name" name="firstName" required placeholder="e.g. Camille">
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last Name *</label>
+                <input type="text" id="last-name" name="lastName" required placeholder="e.g. Tremblay">
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required placeholder="name@example.com">
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required placeholder="418-000-0000">
+              </div>
+            </div>
+
+            <!-- Position Dropdown directly matching prompt's role structure -->
+            <div class="form-group">
+              <label for="desired-role">Desired Position *</label>
+              <select id="desired-role" name="role" required>
+                <option value="" disabled selected>Select the position of your choice</option>
+                <option value="personal-stylist">Personal Stylist & Wardrobe Consultant</option>
+                <option value="vip-salon-manager">VIP Salon & Boutique Manager</option>
+                <option value="lead-patternmaker">High Confection Patternmaker & Tailor</option>
+                <option value="master-cutter">Master Cutter / Fabric & Pattern Specialist</option>
+                <option value="concierge-reception">Atelier Receptionist & Luxury Concierge</option>
+                <option value="fitting-suite-dresser">Fitting Suite Coordinator & Dresser</option>
+                <option value="alterations-assistant">Atelier Assistant & Garment Care</option>
+                <option value="welcome-host">Welcome Host / Hostess</option>
+                <option value="stock-curator">Stock & Inventory Curator</option>
+              </select>
+            </div>
+
+            <!-- Message -->
+            <div class="form-group">
+              <label for="message">Message or Cover Letter</label>
+              <textarea id="message" name="message" placeholder="Tell us about your passion for style, experience, and background..."></textarea>
+            </div>
+
+            <!-- CV Upload -->
+            <div class="form-group">
+              <label>Curriculum Vitae *</label>
+              <div class="file-upload-wrapper" id="drop-zone">
+                <input type="file" id="cv-file" class="file-upload-input" accept=".pdf,.doc,.docx" required>
+                <div class="file-upload-label">
+                  <span style="font-size: 1.5rem">📄</span>
+                  <span id="file-label-text">No document chosen — Drag and drop your CV here</span>
+                  <span class="file-browse-btn">Browse</span>
+                </div>
+              </div>
+              <div id="file-name-display" class="file-selected-name"></div>
+            </div>
+
+            <!-- Consent Checkbox from reference -->
+            <div class="checkbox-group">
+              <input type="checkbox" id="privacy-terms" required>
+              <label for="privacy-terms" class="checkbox-label">
+                By checking this box, I accept the <a href="#privacy" class="legal-link">Privacy Policy</a> as well as the <a href="#terms" class="legal-link">Terms and Conditions</a> of Atelier Délice.
+              </label>
+            </div>
+
+            <!-- Submit button -->
+            <div style="text-align: center; margin-top: 1rem;">
+              <button type="submit" class="btn-primary" style="padding: 0.9rem 2.8rem; font-size: 1rem;">
+                Apply Now
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: VISIT THE ATELIER / LOCATION & HOURS -->
+    <!-- Matches exact coordinates, phone, and hours details from user prompt -->
+    <section class="visit-section" id="visit">
+      <div class="container visit-grid">
+        <div class="visit-info-card">
+          <span class="section-eyebrow" data-i18n="visit.eyebrow">The Atelier & Lounge</span>
+          <h2 class="section-title dark" data-i18n="visit.title">Visit Délice Atelier</h2>
+          
+          <p class="section-desc dark" style="font-size: 0.95rem; line-height: 1.6;" data-i18n="visit.desc">
+            Located in the heart of downtown Lévis, right near the Convention Center and highway, ideal for travelers and hotel guests with ample free private parking and valet service.
+          </p>
+
+          <div class="visit-details">
+            <!-- Address -->
+            <div class="detail-item">
+              <div class="detail-icon">📍</div>
+              <div class="detail-content">
+                <h4 data-i18n="visit.address_lbl">Address</h4>
+                <a href="https://maps.app.goo.gl/1EDA13JAa4m8kCnE6" target="_blank" rel="noopener noreferrer">
+                  146 route du Président Kennedy<br>Lévis, QC, G6V 6C9
+                </a>
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="detail-item">
+              <div class="detail-icon">📞</div>
+              <div class="detail-content">
+                <h4 data-i18n="visit.phone_lbl">Phone</h4>
+                <a href="tel:4188332221">418-833-2221</a>
+              </div>
+            </div>
+
+            <!-- Hours & Status -->
+            <div class="detail-item">
+              <div class="detail-icon">🕒</div>
+              <div class="detail-content">
+                <div class="status-badge">
+                  <span class="status-indicator-dot"></span>
+                  <span data-i18n="visit.open_now">Currently Open</span>
+                </div>
+                <h4 data-i18n="visit.hours_lbl">Atelier Hours</h4>
+                <p>Every Day: 7:30 AM – 10:00 PM</p>
+                <div class="detail-sub" data-i18n="visit.hours_note">
+                  Please check Google hours during statutory holidays or festive seasons.
+                </div>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="detail-item">
+              <div class="detail-icon">✉️</div>
+              <div class="detail-content">
+                <h4 data-i18n="visit.email_lbl">Email</h4>
+                <a href="mailto:resto@delice.ca">resto@delice.ca</a> &bull; <a href="mailto:atelier@delice.ca">atelier@delice.ca</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action / Map Card -->
+        <div class="visit-action-card">
+          <!-- Interactive map mock & navigation -->
+          <div class="interactive-map-frame">
+            <div class="map-placeholder-box">
+              <div class="map-art-grid"></div>
+              <div class="map-pin-pulse">✦</div>
+              <div class="map-location-title">Atelier & Styling Lounge Délice</div>
+              <div style="font-size: 0.85rem; color: var(--text-secondary); text-align: center; max-width: 280px; position: relative; z-index: 2;">
+                146 route du Président Kennedy, Lévis
+              </div>
+              <a href="https://maps.app.goo.gl/1EDA13JAa4m8kCnE6" target="_blank" rel="noopener noreferrer" class="btn-primary" style="position: relative; z-index: 2; font-size: 0.8rem; padding: 6px 14px;">
+                Open in Google Maps ↗
+              </a>
+            </div>
+
+            <div class="map-links-bar">
+              <a href="https://web.isf.ca.payfacto.cloud/#/restodelice/orderType" target="_blank" class="btn-secondary" style="flex: 1; text-align: center; justify-content: center; font-size: 0.82rem;">
+                Takeout or Delivery 🛍️
+              </a>
+              <a href="https://www.freebeespoints.com/fr/PointSale/Purchase/3880" target="_blank" class="btn-secondary" style="flex: 1; text-align: center; justify-content: center; font-size: 0.82rem;">
+                Share the Experience 🎁
+              </a>
+            </div>
+          </div>
+
+          <!-- Express styling consultation banner -->
+          <div class="concierge-promo-card">
+            <div>
+              <div class="promo-title">At-Home Concierge Service</div>
+              <div class="promo-desc">Our stylists travel with a bespoke trunk for your private in-home fittings.</div>
+            </div>
+            <button class="btn-primary" id="open-concierge-btn" style="white-space: nowrap;">
+              Request
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>DÉLICE</h3>
+          <p>In the heart of Lévis since 1970. Blending the timeless craftsmanship of fine textiles with contemporary silhouette design in a bright, welcoming atmosphere.</p>
+          <div style="display: flex; gap: 0.75rem;">
+            <a href="https://delice.ca/en/" class="btn-secondary" style="padding: 4px 10px; font-size: 0.75rem;">English Portal</a>
+            <span class="badge-mild" style="font-size: 0.72rem; padding: 4px 8px;">146 President Kennedy Rd</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#collections">Collections & Lookbook</a></li>
+            <li><a href="#philosophy">The Atelier & Heritage</a></li>
+            <li><a href="#rituals">Programming & Rituals</a></li>
+            <li><a href="#suites">Private Fitting Suites</a></li>
+            <li><a href="#careers">Open Positions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Daily Specials</h4>
+          <ul>
+            <li><a href="#rituals">Happy Hour (2 PM – 6 PM)</a></li>
+            <li><a href="#rituals">Lunch Specials (11 AM – 3 PM)</a></li>
+            <li><a href="#rituals">Vintage Tuesday (11 AM – 10 PM)</a></li>
+            <li><a href="#rituals">Wednesdélice (-20%)</a></li>
+            <li><a href="#rituals">Unlimited Alterations (4 PM – 10 PM)</a></li>
+            <li><a href="#rituals">Wine at 1/2 Price (Thursdays)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact & Location</h4>
+          <ul>
+            <li><a href="tel:4188332221">Phone: 418-833-2221</a></li>
+            <li><a href="mailto:resto@delice.ca">resto@delice.ca</a></li>
+            <li><a href="https://maps.app.goo.gl/1EDA13JAa4m8kCnE6" target="_blank">Lévis, QC, G6V 6C9</a></li>
+            <li><a href="#privacy">Privacy Policy</a></li>
+            <li><a href="#terms">Terms and Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Délice — Styling, Couture & Ready-to-Wear Atelier. All rights reserved.</div>
+        <div>Crafted with passion & gentle style for Lévis.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL 1: INTERACTIVE STYLE FINDER QUIZ -->
+  <div class="modal-backdrop" id="quiz-modal" role="dialog" aria-modal="true" aria-labelledby="quiz-modal-title">
+    <div class="modal-window">
+      <button class="modal-close-btn" id="close-quiz-btn" aria-label="Close diagnostic">&times;</button>
+      
+      <!-- Step 1 -->
+      <div class="quiz-step active" id="quiz-step-1">
+        <span class="badge-tag">Step 1 of 3</span>
+        <h3 id="quiz-modal-title" style="font-family: var(--font-funky); font-size: 1.5rem; margin-top: 0.5rem;">What is your style mood today?</h3>
+        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.3rem;">Select the attitude that speaks to you most:</p>
+        
+        <div class="quiz-options">
+          <button class="quiz-opt-btn" data-answer="chic">
+            <span class="quiz-opt-title">Soft Minimalist</span>
+            <span class="quiz-opt-sub">Calm neutral colors, relaxed silhouettes, washed linen, and clean cuts.</span>
+          </button>
+          <button class="quiz-opt-btn" data-answer="bold">
+            <span class="quiz-opt-title">Electric Funky</span>
+            <span class="quiz-opt-sub">Pops of color, bold statement jewelry, and structured 70s aesthetics.</span>
+          </button>
+          <button class="quiz-opt-btn" data-answer="tailored">
+            <span class="quiz-opt-title">Architectural Tailoring</span>
+            <span class="quiz-opt-sub">Strong shoulders, immaculate drape, and sophisticated structure.</span>
+          </button>
+          <button class="quiz-opt-btn" data-answer="lounge">
+            <span class="quiz-opt-title">Relaxed Chic</span>
+            <span class="quiz-opt-sub">Breathable textiles, thoughtful layering, and effortless all-day comfort.</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="quiz-step" id="quiz-step-2">
+        <span class="badge-tag">Step 2 of 3</span>
+        <h3 style="font-family: var(--font-funky); font-size: 1.5rem; margin-top: 0.5rem;">What occasion are you preparing this wardrobe for?</h3>
+        
+        <div class="quiz-options">
+          <button class="quiz-opt-btn" data-answer="daily">
+            <span class="quiz-opt-title">Everyday Capsule</span>
+            <span class="quiz-opt-sub">To feel radiant from morning to night at work or in the city.</span>
+          </button>
+          <button class="quiz-opt-btn" data-answer="event">
+            <span class="quiz-opt-title">Gala or Cocktail</span>
+            <span class="quiz-opt-sub">A unique statement piece that leaves a lasting impression.</span>
+          </button>
+          <button class="quiz-opt-btn" data-answer="travel">
+            <span class="quiz-opt-title">Travel & Getaway</span>
+            <span class="quiz-opt-sub">Wrinkle-resistant, modular pieces that are easy to mix and match.</span>
+          </button>
+          <button class="quiz-opt-btn" data-answer="renewal">
+            <span class="quiz-opt-title">Wardrobe Detox & Renewal</span>
+            <span class="quiz-opt-sub">Starting fresh with colors and cuts tailored to your silhouette.</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 3: Result -->
+      <div class="quiz-step" id="quiz-step-3">
+        <div style="text-align: center; padding: 1rem 0;">
+          <span style="font-size: 2.5rem;">✨</span>
+          <h3 style="font-family: var(--font-funky); font-size: 1.6rem; margin-top: 0.5rem;">Your Profile: "Lavender Orchid & Powder Rose Allure"</h3>
+          <p style="color: var(--text-secondary); margin: 0.8rem 0 1.5rem; line-height: 1.6;">
+            Your signature thrives in luminous lavender, soft blush pink, and whipped cream tailoring with an architectural yet fluid drape. We recommend our <strong>Lavender Orchid Tailored Suit</strong> or an afternoon <strong>Happy Hour Styling</strong> session.
+          </p>
+          <div style="display: flex; gap: 0.75rem; justify-content: center;">
+            <button class="btn-primary" id="quiz-book-result-btn">Reserve this Look in Salon</button>
+            <button class="btn-secondary" id="quiz-restart-btn">Start Over</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2: BOOKING MODAL -->
+  <div class="modal-backdrop" id="booking-modal" role="dialog" aria-modal="true" aria-labelledby="booking-modal-title">
+    <div class="modal-window">
+      <button class="modal-close-btn" id="close-booking-btn" aria-label="Close reservation">&times;</button>
+      <h3 id="booking-modal-title" style="font-family: var(--font-funky); font-size: 1.6rem; margin-bottom: 0.5rem;">Book an Appointment at the Salon</h3>
+      <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">Select your preferred slot for a personalized styling session in Lévis.</p>
+      
+      <form id="appointment-form" style="display: flex; flex-direction: column; gap: 1.2rem;">
+        <div class="form-group">
+          <label for="book-service">Desired Service *</label>
+          <select id="book-service" required>
+            <option value="happy-hour">Happy Hour Styling (2 PM – 6 PM)</option>
+            <option value="express-midi">Midday Express Look (11 AM – 3 PM)</option>
+            <option value="salon-vip">VIP Private Suite with bubbles & sommelier</option>
+            <option value="capsule-complete">Seasonal wardrobe capsule curation</option>
+            <option value="mardi-vintage">Vintage Archival Discovery Session</option>
+          </select>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label for="book-date">Preferred Date *</label>
+            <input type="date" id="book-date" required>
+          </div>
+          <div class="form-group">
+            <label for="book-time">Preferred Time *</label>
+            <input type="time" id="book-time" required value="14:30">
+          </div>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label for="book-name">Full Name *</label>
+            <input type="text" id="book-name" required placeholder="Your full name">
+          </div>
+          <div class="form-group">
+            <label for="book-phone">Phone Number *</label>
+            <input type="tel" id="book-phone" required placeholder="418-833-0000">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="book-notes">Style Preferences or Sizing</label>
+          <input type="text" id="book-notes" placeholder="e.g. Size 38, fond of sage green, textured linen, and relaxed tailoring">
+        </div>
+
+        <button type="submit" class="btn-primary" style="margin-top: 0.5rem; justify-content: center; padding: 0.85rem;">
+          Confirm My Reservation
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast-notice" id="toast" role="status" aria-live="polite">
+    <span id="toast-icon">✨</span>
+    <span id="toast-msg">Your application was submitted successfully!</span>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script src="js/app.js"></script>
+</body>
+</html>
